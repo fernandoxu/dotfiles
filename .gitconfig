@@ -1,0 +1,32 @@
+[url "https://mirrors.ustc.edu.cn/homebrew-core.git"]
+	insteadOf = https://github.com/Homebrew/homebrew-core
+[url "https://mirrors.ustc.edu.cn/linuxbrew-core.git"]
+	insteadOf = https://github.com/Homebrew/linuxbrew-core
+[url "https://mirrors.ustc.edu.cn/brew.git"]
+	insteadOf = https://github.com/Homebrew/brew
+[user]
+	name = fernandoxu
+	email = fernandoxu9@gmail.com
+[core]
+	excludesfile = /Users/xulishuai/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/xulishuai/.stCommitMsg
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[pull]
+	rebase = true
+[branch]
+  	autosetuprebase = always
+[rebase]
+	autoStash = true
+[push]
+  	default = current
