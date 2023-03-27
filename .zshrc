@@ -110,13 +110,17 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias cl="clear"
+alias p="pnpm"
+alias y="yarn"
+alias n="npm"
 
-function c { code ${@:-.} }
+function c { code ${@:-.}}
 function o { open ${@:-.}}
 
 alias sz="source ~/.zshrc"
 alias c21="cd ~/Documents/workspace2021"
 alias c22="cd ~/Documents/workspace2022"
+alias c23="cd ~/Documents/workspace2023"
 alias cddp="cd ~/Documents/eol-dev/dev/ddp_pc"
 alias cfe="cd ~/Documents/eol-dev/ddp_branches/ddp_fe_development"
 
@@ -126,7 +130,7 @@ alias gca="git commit -am"
 alias gco="git checkout"
 alias gps="git push"
 
-mg () { mkdir "$@" && cd "$@" || exit; }
+mc () { mkdir "$@" && cd "$@" || exit; }
 cdl() { cd "$@" && ll; }
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -140,7 +144,7 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 source ~/.bash_profile
 
 # pnpm
-export PNPM_HOME="/Users/xulishuai/Library/pnpm"
+export PNPM_HOME="~/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
