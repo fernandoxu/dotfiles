@@ -128,7 +128,7 @@ function gc { git commit -m "$@"; }
 alias gaa="git add -A"
 alias gca="git commit -am"
 alias gco="git checkout"
-alias gps="git push"
+alias gps="git pull -r && git push"
 
 mc () { mkdir "$@" && cd "$@" || exit; }
 cdl() { cd "$@" && ll; }
