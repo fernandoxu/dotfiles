@@ -111,18 +111,17 @@ source $ZSH/oh-my-zsh.sh
 
 alias cl="clear"
 alias p="pnpm"
-alias y="yarn"
 alias n="npm"
 
 function c { code ${@:-.}}
+function cs { cursor ${@:-.}}
 function o { open ${@:-.}}
 
 alias sz="source ~/.zshrc"
 alias c21="cd ~/Documents/workspace2021"
 alias c22="cd ~/Documents/workspace2022"
 alias c23="cd ~/Documents/workspace2023"
-alias cddp="cd ~/Documents/eol-dev/dev/ddp_pc"
-alias cfe="cd ~/Documents/eol-dev/ddp_branches/ddp_fe_development"
+alias c24="cd ~/Documents/workspace2024"
 
 function gc { git commit -m "$@"; }
 alias gaa="git add -A"
@@ -133,8 +132,7 @@ alias gps="git pull -r && git push"
 mc () { mkdir "$@" && cd "$@" || exit; }
 cdl() { cd "$@" && ll; }
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export FNM_NODE_DIST_MIRROR="https://npmmirror.com/mirrors/node"
 
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
@@ -147,6 +145,3 @@ source ~/.bash_profile
 export PNPM_HOME="~/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
