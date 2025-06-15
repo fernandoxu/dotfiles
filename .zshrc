@@ -122,6 +122,7 @@ alias c21="cd ~/Documents/workspace2021"
 alias c22="cd ~/Documents/workspace2022"
 alias c23="cd ~/Documents/workspace2023"
 alias c24="cd ~/Documents/workspace2024"
+alias c25="cd ~/Documents/workspace2025"
 
 function gc { git commit -m "$@"; }
 alias gaa="git add -A"
